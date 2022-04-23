@@ -1,7 +1,13 @@
 CXX := @CXX@
 CXXFLAGS := @CXXFLAGS@
+BIN_FOLDER := bin
 program := jesus
 files := src/main.cpp
-all: $(program)
-$(program): $(files)
+
+core: $(BIN_FOLDER)/$(program)
+
+$(BIN_FOLDER)/$(program): $(files)
+	mkdir -p bin
 	$(CXX) src/main.cpp $(CXXFLAGS) -o $@
+
+all: core
