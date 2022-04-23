@@ -7,5 +7,6 @@ AC_CHECK_HEADERS([
 	vector
 	string
 ])
+
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
