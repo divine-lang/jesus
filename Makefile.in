@@ -1,0 +1,7 @@
+CXX := @CXX@
+CXXFLAGS := @CXXFLAGS@
+program := jesus
+files := src/main.cpp
+all: $(program)
+$(program): $(files)
+	$(CXX) src/main.cpp $(CXXFLAGS) -o $@
