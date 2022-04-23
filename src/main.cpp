@@ -2,7 +2,9 @@
 #include <vector>
 #include <string>
 
+#include <jarfetch.cpp>
+
 int main(int argc, char** argv){
 	std::vector<std::string> args(argv, argc + argv);
-	std::cout << args[0] << std::endl;
+	jesus_jarfetch::fetch();
 }

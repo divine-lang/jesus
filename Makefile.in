@@ -2,7 +2,7 @@ CXX := @CXX@
 CXXFLAGS := @CXXFLAGS@
 BIN_FOLDER := bin
 PROGRAM := jesus
-FILES := src/main.cpp
+FILES := src/main.cpp src/jarfetch.cpp
 INSTALL_DIR := /usr/local
 CONFIG_DIR := /etc
 
