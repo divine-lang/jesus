@@ -23,10 +23,11 @@ ifneq ($(shell id -u), 0)
 endif
 
 install.sh:
-	echo "mkdir -p $(CONFIG_DIR)/jesus\n\
+	echo -e "rm -rf $(CONFIG_DIR)/jesus\n\
+		rm -rf $(INSTALL_DIR)/jesus\n\
+		mkdir -p $(CONFIG_DIR)/jesus\n\
 		mkdir -p $(INSTALL_DIR)/jesus\n\
-		install -m755 ./$(BIN_FOLDER)/$(PROGRAM) $(INSTALL_DIR)/jesus/$(PROGRAM)\n\
-		install -m755 ./config.default.conf $(CONFIG_DIR)/jesus/config.conf\n\
+		cp ./$(BIN_FOLDER)/$(PROGRAM) $(INSTALL_DIR)/jesus/$(PROGRAM)\n\
 		ln -sf $(INSTALL_DIR)/jesus/$(PROGRAM) /bin/$(PROGRAM)" > install.sh
 	chmod +x install.sh
 
