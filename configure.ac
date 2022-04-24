@@ -7,6 +7,10 @@ AC_CHECK_HEADERS([
 	vector
 	string
 	curl/curl.h
+	cstring
+	sstream
+	map
+	algorithm
 ])
 
 AC_SEARCH_LIBS(curl_global_init, curl, [], [AC_MSG_ERROR(A working libcurl is required)])

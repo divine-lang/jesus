@@ -2,7 +2,7 @@ CXX := @CXX@
 CXXFLAGS := @CXXFLAGS@
 BIN_FOLDER := bin
 PROGRAM := jesus
-FILES := src/main.cpp src/jarfetch.cpp
+FILES := src/main.cpp src/jarfetch.cpp src/log.cpp src/util.cpp
 INSTALL_DIR := /usr/local
 CONFIG_DIR := /etc
 
@@ -24,9 +24,11 @@ endif
 
 install.sh:
 	echo "mkdir -p $(CONFIG_DIR)/jesus\n\
-		install -Dm755 ./$(BIN_FOLDER)/$(PROGRAM) $(INSTALL_DIR)/jesus/$(PROGRAM)\n\
-		install -Dm755 ./config.default.conf $(CONFIG_DIR)/jesus/config.conf\n\
+		mkdir -p $(INSTALL_DIR)/jesus\n\
+		install -m755 ./$(BIN_FOLDER)/$(PROGRAM) $(INSTALL_DIR)/jesus/$(PROGRAM)\n\
+		install -m755 ./config.default.conf $(CONFIG_DIR)/jesus/config.conf\n\
 		ln -sf $(INSTALL_DIR)/jesus/$(PROGRAM) /bin/$(PROGRAM)" > install.sh
+	chmod +x install.sh
 
 install: root all install.sh
 	./install.sh

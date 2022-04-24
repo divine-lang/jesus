@@ -2810,6 +2810,30 @@ then :
   printf "%s\n" "#define HAVE_CURL_CURL_H 1" >>confdefs.h
 
 fi
+ac_fn_cxx_check_header_compile "$LINENO" "cstring" "ac_cv_header_cstring" "$ac_includes_default"
+if test "x$ac_cv_header_cstring" = xyes
+then :
+  printf "%s\n" "#define HAVE_CSTRING 1" >>confdefs.h
+
+fi
+ac_fn_cxx_check_header_compile "$LINENO" "sstream" "ac_cv_header_sstream" "$ac_includes_default"
+if test "x$ac_cv_header_sstream" = xyes
+then :
+  printf "%s\n" "#define HAVE_SSTREAM 1" >>confdefs.h
+
+fi
+ac_fn_cxx_check_header_compile "$LINENO" "map" "ac_cv_header_map" "$ac_includes_default"
+if test "x$ac_cv_header_map" = xyes
+then :
+  printf "%s\n" "#define HAVE_MAP 1" >>confdefs.h
+
+fi
+ac_fn_cxx_check_header_compile "$LINENO" "algorithm" "ac_cv_header_algorithm" "$ac_includes_default"
+if test "x$ac_cv_header_algorithm" = xyes
+then :
+  printf "%s\n" "#define HAVE_ALGORITHM 1" >>confdefs.h
+
+fi
 
 
 { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for library containing curl_global_init" >&5
